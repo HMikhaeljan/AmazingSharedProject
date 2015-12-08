@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 public class Player implements Serializable, IPlayer{
 
 	private int ID;
+        private int userid;
 	private int hitpoints;
         
         private Node location;
@@ -36,7 +37,8 @@ public class Player implements Serializable, IPlayer{
 	 * @param hitpoints
 	 * @param cooldown
 	 */
-	public Player(int id, int hitpoints, int roleID) {
+	public Player(int userid, int id, int hitpoints, int roleID) {
+                this.userid = userid;
 		this.ID = id;
                 this.hitpoints = hitpoints;                
                 this.playerRole = new PlayerRole(roleID);
@@ -48,6 +50,9 @@ public class Player implements Serializable, IPlayer{
                 active =true;
 	}
         
+        public int getUserID() {
+            return userid;
+        }
         
         
         public void SpawnPlayer(Node n)
