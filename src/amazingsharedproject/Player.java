@@ -5,7 +5,7 @@
  */
 package amazingsharedproject;
 
-import Interfaces.IPlayer;
+import amazingsharedproject.Interfaces.IPlayer;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import javafx.application.Platform;

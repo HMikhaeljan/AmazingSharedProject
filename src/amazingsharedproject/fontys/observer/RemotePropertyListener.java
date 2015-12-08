@@ -1,4 +1,4 @@
-package fontys.observer;
+package amazingsharedproject.fontys.observer;
 
 import java.beans.*;
 import java.rmi.*;
