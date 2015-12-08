@@ -18,7 +18,7 @@ import amazingsharedproject.Block;
  * @author Hovsep
  */
 public interface IGame extends Remote{
-
+    public int getGameID() throws RemoteException;
     public Block[][] getGrid() throws RemoteException;
     public GameState getGameState() throws RemoteException;
     public void handleInput(int playerid, List<KeyCode> keys) throws RemoteException;
