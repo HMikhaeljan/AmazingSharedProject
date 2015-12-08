@@ -5,7 +5,6 @@
  */
 package amazingsharedproject;
 
-import GamePackage.Used;
 import amazingsharedproject.Player;
 import java.io.Serializable;
 import java.util.List;
