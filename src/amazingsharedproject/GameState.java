@@ -25,4 +25,16 @@ public class GameState implements Serializable{
         this.abilities = abilities;
         this.messages = messages;
     }
+    
+    public List<Player> getPlayers() {
+        return players;
+    }
+    
+    public List<Used> getAbilities() {
+        return abilities;
+    }
+    
+    public List<String> getMessages() {
+        return messages;
+    }
 }

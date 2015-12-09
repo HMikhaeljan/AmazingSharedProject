@@ -16,53 +16,65 @@ import javafx.scene.image.ImageView;
  *
  * @author Hovsep
  */
-public class Player implements Serializable{
-
+public class Player implements Serializable {
+    
     private int ID;
     private int userid;
     private int hitpoints;
-    
+
     private double X;
     private double Y;
-    
+
     private boolean ready;
     
+    private Direction direction = Direction.UP;
+
     //private Node location;
     //private ImageView imageView;
-        
-    private transient PlayerRole playerRole;
-        
+    
+    private int playerRoleID;
 
-	/**
-	 * 
-	 * @param id
-	 * @param hitpoints
-	 * @param cooldown
-	 */
+    /**
+     *
+     * @param id
+     * @param hitpoints
+     * @param cooldown
+     */
     public Player(int userid, int id, int hitpoints, int roleID) {
         this.userid = userid;
         this.ID = id;
-        this.hitpoints = hitpoints;                
-        this.playerRole = new PlayerRole(roleID);
+        this.hitpoints = hitpoints;
+        this.playerRoleID = roleID;
     }
     
-    public int getUserID() {    
+    public Direction getDirection() {
+        return direction;
+    }
+    
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public int getPlayerRoleID() {
+        return playerRoleID;
+    }
+
+    public int getUserID() {
         return userid;
     }
-        
-    public int getID()
-    {
+
+    public int getID() {
         return this.ID;
     }
-    
+
     public void setReady(boolean ready) {
-        this.ready= ready;
+        this.ready = ready;
     }
-    
+
     public boolean getReady() {
         return ready;
     }
-        
+
     public Double getX() {
         return X;
     }
@@ -70,13 +82,13 @@ public class Player implements Serializable{
     public Double getY() {
         return Y;
     }
-    
+
     public void setX(double x) {
-        X= x;
+        X = x;
     }
-    
+
     public void setY(double y) {
-        Y= y;
+        Y = y;
     }
 
     public int getHitpoints() {

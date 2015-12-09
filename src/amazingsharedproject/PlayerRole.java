@@ -6,6 +6,7 @@
 
 package amazingsharedproject;
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.image.Image;
@@ -14,7 +15,7 @@ import javafx.scene.image.Image;
  *
  * @author Hovsep
  */
-public class PlayerRole {
+public class PlayerRole implements Serializable{
 
     private int ID; //This is the Role ID
     private String name; //This is the Role name.
@@ -33,8 +34,7 @@ public class PlayerRole {
         this.ID = id;
         ability = new Ability[16];
         defaultImg = new ArrayList<Image>();
-        createRole(id);
-        
+        createRole(id);        
     }
 
     public int getHitpoints() {
@@ -45,8 +45,25 @@ public class PlayerRole {
         return this.hitpoints = hitpoints;
     }
     
-    public Image getImage(int imgID) {
-        return defaultImg.get(imgID);
+    public Image getImage(Direction direction) {
+        Image localImage = null;
+        switch (direction) {
+            case DOWN:
+                localImage = defaultImg.get(0);                
+                
+            case LEFT:
+                localImage = defaultImg.get(1);                
+                
+            case RIGHT:
+                localImage = defaultImg.get(2);                
+            
+            case UP:
+                localImage = defaultImg.get(3);
+                
+            default:
+                //Do Nothing
+        }
+        return localImage;        
     }
     
     public int getID() {
@@ -67,7 +84,7 @@ public class PlayerRole {
             case 0:
                 name = "Rogue";
                 hitpoints = 190;
-                defaultImg.add(Sprite.LoadSprite("Resources/Monster.jpg", 16, 16));
+                defaultImg.add(Sprite.LoadSprite("Resources/RogueDOWN.jpg", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueLEFT.png", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueRIGHT.png", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueUP.png", 16, 16));
