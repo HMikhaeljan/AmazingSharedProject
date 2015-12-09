@@ -22,6 +22,7 @@ public interface IGame extends Remote{
     public Block[][] getGrid() throws RemoteException;
     public GameState getGameState() throws RemoteException;
     public void handleInput(int playerid, List<KeyCode> keys) throws RemoteException;
+    public void setReady(int playerid, boolean ready) throws RemoteException;
     public Player getPlayer(int userid) throws RemoteException;
     
 }
