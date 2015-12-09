@@ -70,6 +70,14 @@ public class Player implements Serializable{
     public Double getY() {
         return Y;
     }
+    
+    public void setX(double x) {
+        X= x;
+    }
+    
+    public void setY(double y) {
+        Y= y;
+    }
 
     public int getHitpoints() {
         return hitpoints;
