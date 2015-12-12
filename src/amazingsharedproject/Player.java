@@ -24,6 +24,7 @@ public class Player implements Serializable {
 
     private double X;
     private double Y;
+    private boolean isMoving;
 
     private boolean ready;
     
@@ -45,8 +46,16 @@ public class Player implements Serializable {
         this.ID = id;
         this.hitpoints = hitpoints;
         this.playerRoleID = roleID;
+        this.isMoving = false;
     }
     
+    public boolean isMoving() {
+        return isMoving;
+    }
+    
+    public void setMoving(boolean moving) {
+        isMoving = moving;
+    }
     public Direction getDirection() {
         return direction;
     }
