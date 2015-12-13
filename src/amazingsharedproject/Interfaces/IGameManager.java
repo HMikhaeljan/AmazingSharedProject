@@ -7,15 +7,18 @@ package amazingsharedproject.Interfaces;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 /**
  *
  * @author Hovsep
  */
-public interface IGameManager extends Remote{
-    
+public interface IGameManager extends Remote {
+
     public IGame newLobby(int userid) throws RemoteException;
+
     public IGame joinLobby(int gameid, int userid) throws RemoteException;
-    
-    
+
+    public ArrayList<IGame> getGames() throws RemoteException;
+
 }
