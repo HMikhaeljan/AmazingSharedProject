@@ -22,7 +22,7 @@ import javafx.scene.input.KeyCode;
  *
  * @author Hovsep
  */
-public class Ability implements Serializable, IAbility{
+public class Ability implements Serializable{
 
     static final int spritesize = 16;
 
@@ -60,22 +60,6 @@ public class Ability implements Serializable, IAbility{
     public String getName() {
         return name;
     }
-
-    @Override
-    public Double getX() throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Double getY() throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getCreatorID() throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     
     private class AnimTask extends AnimationTimer {
 

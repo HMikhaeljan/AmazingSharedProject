@@ -18,5 +18,7 @@ public interface IAbility {
     public Double getY() throws RemoteException;
 
     public int getCreatorID() throws RemoteException;
+    
+    public int getAbilityID() throws RemoteException;
 
 }
