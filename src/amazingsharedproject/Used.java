@@ -30,8 +30,9 @@ public class Used implements IAbility, Serializable{
     }
 
     public void setX(double x) {
-        this.x = x;
+        this.x = x; 
     }
+    
 
     public void setY(double y) {
         this.y = y;
