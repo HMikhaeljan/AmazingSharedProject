@@ -20,5 +20,4 @@ public interface IAbility {
     public int getCreatorID() throws RemoteException;
     
     public int getAbilityID() throws RemoteException;
-
 }
