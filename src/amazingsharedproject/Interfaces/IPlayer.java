@@ -19,5 +19,7 @@ public interface IPlayer {
 
     public int getHitpoints() throws RemoteException;
     
+    public void setRoleID(int id) throws RemoteException;
+    
     public Boolean getReady() throws RemoteException;
 }

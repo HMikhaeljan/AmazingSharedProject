@@ -5,12 +5,7 @@
  */
 package amazingsharedproject;
 
-import amazingsharedproject.Interfaces.IPlayer;
 import java.io.Serializable;
-import java.rmi.RemoteException;
-import javafx.application.Platform;
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
 
 /**
  *
@@ -49,6 +44,12 @@ public class Player implements Serializable {
         this.isMoving = false;
     }
     
+    public void setRoleID(int id){
+        this.playerRoleID = id;
+        
+        System.out.println("PlayerRole11111111111111111111111"+id);
+    }
+    
     public boolean isMoving() {
         return isMoving;
     }
@@ -65,6 +66,7 @@ public class Player implements Serializable {
     }
 
     public int getPlayerRoleID() {
+        System.out.println("PlayerClass Playerrole: " + playerRoleID);
         return playerRoleID;
     }
 
