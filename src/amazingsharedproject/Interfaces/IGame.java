@@ -35,5 +35,6 @@ public interface IGame extends Remote {
 
     public void setGameName(String g) throws RemoteException;
     
+     public List<Player> getPlayers() throws RemoteException;
     
 }
