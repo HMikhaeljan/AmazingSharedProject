@@ -179,6 +179,13 @@ public class Ability implements Serializable{
      * @param id
      */
 
+    public static Image getImage(int abilityid) {
+        switch(abilityid) {
+            case 1:
+                return Sprite.LoadSprite("Resources/Firebolt-UP.png", 16, 16);
+        }
+        return null;
+    }
     private void LoadAbility(int id) {
 
         switch (id) {

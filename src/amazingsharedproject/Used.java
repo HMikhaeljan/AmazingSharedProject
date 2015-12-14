@@ -6,13 +6,14 @@
 package amazingsharedproject;
 
 import amazingsharedproject.Interfaces.IAbility;
+import java.io.Serializable;
 import java.rmi.RemoteException;
 
 /**
  *
  * @author Hovsep
  */
-public class Used implements IAbility {
+public class Used implements IAbility, Serializable{
 
     int creatorID;
     int abilityID;
@@ -20,9 +21,12 @@ public class Used implements IAbility {
     double y;
     Direction direction;
 
-    public Used(int creatorID, int abilityID) {
+    public Used(int creatorID, int abilityID, double x, double y, Direction d) {
         this.creatorID = creatorID;
         this.abilityID = abilityID;
+        this.x= x;
+        this.y = y;
+        this.direction = d;
     }
 
     public void setX(double x) {
@@ -45,6 +49,10 @@ public class Used implements IAbility {
     @Override
     public Double getY() throws RemoteException {
         return y;
+    }
+    
+    public Direction getDirection() {
+        return direction;
     }
 
     @Override
