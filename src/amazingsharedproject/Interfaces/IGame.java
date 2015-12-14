@@ -39,4 +39,6 @@ public interface IGame extends Remote {
 
     public Boolean allPlayersReady() throws RemoteException;
 
+    public void changeRole(int userid, int playerRoleID) throws RemoteException;
+
 }

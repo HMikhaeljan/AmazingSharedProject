@@ -84,7 +84,7 @@ public class PlayerRole implements Serializable{
             case 0:
                 name = "Rogue";
                 hitpoints = 190;
-                defaultImg.add(Sprite.LoadSprite("Resources/RogueDOWN.jpg", 16, 16));
+                defaultImg.add(Sprite.LoadSprite("Resources/RogueDOWN.png", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueLEFT.png", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueRIGHT.png", 16, 16));
                 defaultImg.add(Sprite.LoadSprite("Resources/RogueUP.png", 16, 16));
