@@ -181,8 +181,14 @@ public class Ability implements Serializable{
 
     public static Image getImage(int abilityid) {
         switch(abilityid) {
-            case 1:
+            case 0:
+                return Sprite.LoadSprite("Resources/Shuriken-UP.png", 16, 16);
+            case 4:
                 return Sprite.LoadSprite("Resources/Firebolt-UP.png", 16, 16);
+            case 8:
+                return Sprite.LoadSprite("Resources/Sword-UP.png", 16, 16);
+            case 12:
+                return Sprite.LoadSprite("Resources/Arrow-UP.png", 16 , 16);
         }
         return null;
     }
@@ -195,7 +201,10 @@ public class Ability implements Serializable{
                 damage = 10;
                 spriteID = "0";
                 cooldownTimer = 1;
-                img = Sprite.LoadSprite("Resources/MapEdge.jpg", 16, 16);
+                images.add(Sprite.LoadSprite("Resources/Shuriken-DOWN.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Shuriken-LEFT.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Shuriken-RIGHT.png", 16, 16));
+                images.add(Sprite.LoadSprite("Resources/Shuriken-UP.png", 16, 16));
                 abilityNode = new ImageView(img);
                 break;
             case 1:
@@ -276,7 +285,10 @@ public class Ability implements Serializable{
                 damage = 15;
                 spriteID = "9";
                 cooldownTimer = 15;
-                img = Sprite.LoadSprite("Resources/MapEdge.jpg", 16, 16);
+                images.add(Sprite.LoadSprite("Resources/Sword-DOWN.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Sword-LEFT.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Sword-RIGHT.png", 16, 16));
+                images.add(Sprite.LoadSprite("Resources/Sword-UP.png", 16, 16));
                 abilityNode = new ImageView(img);
                 break;
             case 10:
@@ -310,7 +322,10 @@ public class Ability implements Serializable{
                 damage = 15;
                 spriteID = "13";
                 cooldownTimer = 15;
-                img = Sprite.LoadSprite("Resources/MapEdge.jpg", 16, 16);
+                images.add(Sprite.LoadSprite("Resources/Arrow-DOWN.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Arrow-LEFT.png", 16, 16));                
+                images.add(Sprite.LoadSprite("Resources/Arrow-RIGHT.png", 16, 16));
+                images.add(Sprite.LoadSprite("Resources/Arrow-UP.png", 16, 16));
                 abilityNode = new ImageView(img);
                 break;
             case 14:
