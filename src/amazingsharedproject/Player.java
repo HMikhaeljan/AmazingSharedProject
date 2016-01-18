@@ -44,6 +44,16 @@ public class Player implements Serializable {
         this.isMoving = false;
     }
     
+    public boolean damage(int damage) {
+        if(hitpoints <= 0) 
+            return true;
+        hitpoints-=damage;
+        if(hitpoints <= 0)
+            return true;
+        else
+            return false;
+    }
+    
     public void setRoleID(int id){
         this.playerRoleID = id;
         

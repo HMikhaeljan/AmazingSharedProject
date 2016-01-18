@@ -19,6 +19,7 @@ public class Used implements IAbility, Serializable{
     int abilityID;
     double x;
     double y;
+    int damage;
     Direction direction;
 
     public Used(int creatorID, int abilityID, double x, double y, Direction d) {
@@ -27,6 +28,11 @@ public class Used implements IAbility, Serializable{
         this.x= x;
         this.y = y;
         this.direction = d;
+        this.damage = 10;
+    }
+    
+    public int getDamage() {
+        return damage;
     }
 
     public void setX(double x) {
