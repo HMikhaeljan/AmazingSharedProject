@@ -29,7 +29,7 @@ public interface IGame extends Remote {
 
     public void setReady(int playerid, boolean ready) throws RemoteException;
 
-    public Player getPlayer(int userid) throws RemoteException;
+    public Player getPlayer(int userid, String naam) throws RemoteException;
 
     public String getGameName() throws RemoteException;
 

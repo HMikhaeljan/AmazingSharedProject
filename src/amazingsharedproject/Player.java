@@ -13,6 +13,7 @@ import java.io.Serializable;
  */
 public class Player implements Serializable {
     
+    private String naam;
     private int ID;
     private int userid;
     private int hitpoints;
@@ -42,6 +43,14 @@ public class Player implements Serializable {
         this.hitpoints = hitpoints;
         this.playerRoleID = roleID;
         this.isMoving = false;
+    }
+    
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+    
+    public String getNaam() {
+        return this.naam;
     }
     
     public boolean damage(int damage) {
@@ -76,7 +85,7 @@ public class Player implements Serializable {
     }
 
     public int getPlayerRoleID() {
-        System.out.println("PlayerClass Playerrole: " + playerRoleID);
+        //System.out.println("PlayerClass Playerrole: " + playerRoleID);
         return playerRoleID;
     }
 
