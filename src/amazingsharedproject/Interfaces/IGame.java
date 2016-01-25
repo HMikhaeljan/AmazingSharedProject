@@ -12,6 +12,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 import javafx.scene.input.KeyCode;
 import amazingsharedproject.Block;
+import java.util.ArrayList;
 
 /**
  *
@@ -40,5 +41,9 @@ public interface IGame extends Remote {
     public Boolean allPlayersReady() throws RemoteException;
 
     public void changeRole(int userid, int playerRoleID) throws RemoteException;
+    
+    public void addToGameChat(String chat) throws RemoteException;
+
+    public ArrayList<String> loadGameChat() throws RemoteException;
 
 }

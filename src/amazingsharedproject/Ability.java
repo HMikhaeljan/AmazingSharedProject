@@ -5,9 +5,7 @@
  */
 package amazingsharedproject;
  
-import amazingsharedproject.Interfaces.IAbility;
 import java.io.Serializable;
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.animation.AnimationTimer;

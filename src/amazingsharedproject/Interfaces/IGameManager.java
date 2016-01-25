@@ -18,9 +18,13 @@ public interface IGameManager extends Remote {
     public IGame newLobby(int userid) throws RemoteException;
 
     public IGame joinLobby(int gameid, int userid) throws RemoteException;
-    
+
     public void removeLobby(int gameid) throws RemoteException;
 
     public ArrayList<IGame> getGames() throws RemoteException;
+
+    public ArrayList<String> loadChat() throws RemoteException;
+
+    public void addToChat(String chat) throws RemoteException;
 
 }
