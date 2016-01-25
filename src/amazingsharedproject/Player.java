@@ -17,6 +17,8 @@ public class Player implements Serializable {
     private int ID;
     private int userid;
     private int hitpoints;
+    private int startHitpoints;
+    private int kills;
 
     private double X;
     private double Y;
@@ -41,8 +43,24 @@ public class Player implements Serializable {
         this.userid = userid;
         this.ID = id;
         this.hitpoints = hitpoints;
+        this.startHitpoints = hitpoints;
         this.playerRoleID = roleID;
         this.isMoving = false;
+        this.kills=0;
+    }
+    
+    public boolean isDeath() {
+        if(hitpoints <= 0)
+            return true;
+        else
+            return false;
+    }
+    
+    public int getKills() {
+        return kills;
+    }
+    public int getBaseHitpoints() {
+        return startHitpoints;
     }
     
     public void setNaam(String naam) {
@@ -63,10 +81,13 @@ public class Player implements Serializable {
             return false;
     }
     
+    public void killedPlayer() {
+        kills++;
+    }
     public void setRoleID(int id){
         this.playerRoleID = id;
         
-        System.out.println("PlayerRole11111111111111111111111"+id);
+        //System.out.println("PlayerRole11111111111111111111111"+id);
     }
     
     public boolean isMoving() {
