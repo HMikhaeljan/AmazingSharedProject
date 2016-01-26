@@ -84,6 +84,14 @@ public class Player implements Serializable {
     public void killedPlayer() {
         kills++;
     }
+    
+    private String killedBy="";
+    public void killedByPlayer(String name) {
+        killedBy=name;
+    }
+    public String getKilledBy() {
+        return killedBy;
+    }
     public void setRoleID(int id){
         this.playerRoleID = id;
         
